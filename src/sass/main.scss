@@ -1,3 +1,9 @@
-body {
-    background-color: red;
-}
+// Global 🌏🌎🌍
+@import './global/global';
+@import './global/variables';
+@import './global/mixin';
+
+
+// Modules 🔮🎨
+@import './module/nav.scss';
+@import './module/intro.scss';
