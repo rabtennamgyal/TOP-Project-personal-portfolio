@@ -1,4 +1,5 @@
 .navbar {
+    position: relative;
     display: grid;
     grid-template-columns: 70% 30%;
     height: 10rem;
@@ -90,17 +91,62 @@
             justify-self: end;
             display: none;
             flex-direction: column;
+            justify-content: space-between;
 
             @include respond(phone) {
                 display: flex;
             }
 
+            #hamburg1 {
+                margin: 0 0 1rem 0;
+            }
+
             span {
-                color: #fff;
                 border: .1px solid #fff;
-                width: 20px;
-                //margin: 3px 0;
+                width: 25px;
                 transition: .7s ease-in-out;
+            }
+        }
+    }
+
+    .mobileMenu {
+        background: #fff;
+        position: absolute;
+        top: 10rem;
+        height: 0;
+        width: 100vw;
+        transition: 0.7s ease-in-out;
+
+        .mobileContent {
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+
+            h1 {
+                cursor: pointer;
+                font-family: 'Mukta', cursive, sans-serif;
+                font-size: 3rem;
+                margin: 2rem 0;
+            }
+    
+            li {
+                list-style: none;
+                margin: 3rem 0;
+
+                a {
+                    text-decoration: none;
+
+                    i {
+                        font-size: 4rem;
+                        color: #000;
+                        transition: 0.7s ease-in;
+
+                        &:hover {
+                            color: #808080;
+                        }
+                    }
+                }
             }
         }
     }

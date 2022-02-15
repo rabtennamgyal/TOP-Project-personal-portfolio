@@ -2,4 +2,4 @@ import './sass/main.scss';
 
 
 // JavaScript
-import './javascript/paintdom';
+import './javascript/domutilities';
