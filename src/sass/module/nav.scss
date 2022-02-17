@@ -165,27 +165,42 @@
             }
     
             .list {
+                cursor: pointer;
                 background: #000000;
-                height: 20%;
-                width: 100%;
+                height: 15rem;
+                width: 15rem;
                 margin: 2rem 0;
+                border-radius: 10px;
                 box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+                &:hover {
+                    background: #fff;
+
+                    i {
+                        color:#000000;
+                    }
+                }
 
                 li {
                     height: 100%;
                     list-style: none;
+                    display: grid;
+                    place-items: center;
     
                     a {
                         text-decoration: none;
+
+                        #twitter {
+                            font-size: 8rem;
+                        }
+
+                        #github, #linkedin {
+                            font-size: 9rem;
+                        }
     
                         i {
-                            font-size: 4rem;
                             color: #ffffff;
                             transition: 0.7s ease-in;
-    
-                            &:hover {
-                                color: #808080;
-                            }
                         }
                     }
                 }

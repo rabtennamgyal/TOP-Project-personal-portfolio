@@ -1,53 +1,50 @@
 .intro {
     min-height: 47rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    @include respond(phone) {
-        grid-template-columns: 1fr;
-    }
-
-    @include respond(tab) {
-        grid-template-columns: 1fr;
-    }
+    grid-template-rows: 30% 70%;
 
     .intro1 {
+        width: 50%;
         overflow: hidden;
-        animation: revealText 3s linear forwards;
+        animation: revealText 5s ease-in;
+        margin-left: 3rem;
+        
 
-        #introText {
-            cursor: pointer;
-            color: $white;
-            font-size: 7rem;
-            font-family: cursive, sans-serif;
-            padding: 0 0 0 3rem;
+        #welcome {
+            color: #000000;
+            font-family: Audiowide, cursive, sans-serif;
+            font-size: 11rem;
+            -webkit-text-stroke: .1px #ffffff;
+            text-transform: uppercase;
+        }
 
-            @include respond(phone) {
-                font-size: 4.5rem;
-                padding: 0 0 0 1rem;
-            }
-
-            @include respond(tab) {
-                font-size: 6rem;
-                padding: 0 0 0 2rem;
-            }
+        #welcome::before {
+            content: attr(data-text);
+            color: #FF44CC;
+            height: 25%;
+            width: 0;
+            position: absolute;
+            -webkit-text-stroke: 0vw #000000;
+            animation: slideright 3s linear forwards;
+            overflow: hidden;
         }
     }
 }
 
-@keyframes revealText {
+@keyframes slideright {
     0% {
-        height: 0%;
         width: 0%;
     }
 
-    50% {
-        height: 0%;
-        width: 80%;
+    99% {
+        height: 25%;
+        width: 50%;
     }
 
     100% {
-        height: 100%;
-        width: 100%;
+        height: 25%;
+        width: 50%;
+        color: #000;
+        -webkit-text-stroke: .1px #FF44CC;
     }
 }
