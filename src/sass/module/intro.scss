@@ -16,8 +16,10 @@
         animation: revealText 3s linear forwards;
 
         #introText {
+            cursor: pointer;
             color: $white;
             font-size: 7rem;
+            font-family: cursive, sans-serif;
             padding: 0 0 0 3rem;
 
             @include respond(phone) {
