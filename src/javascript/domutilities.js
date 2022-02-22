@@ -33,21 +33,34 @@ function animateHamburger() {
     }
 }
 
+let position;
+let current;
+
 function slideLine() {
     for (let i = 0; i < lists.length; i++) {
         if (lists[i].matches(':hover')) {
             const elleft = lists[i].getBoundingClientRect().left;
             const elwidth = lists[i].offsetWidth;
+            position = elleft;
+            current = lists[i];
             line.style.left = `${elleft}px`;
             line.style.width = `${elwidth}px`;
         }
     }
-    // check for the element that was last hovered 
+}
+
+function setPos(pos, cur) {
+    if (cur) {
+        const val1 = cur.getBoundingClientRect().left;
+        const val2 = cur.offsetWidth;
+        line.style.left = `${val1}px`;
+        line.style.width = `${val2}px`;
+    }
 }
 
 setInterval(() => {
-    slideLine()
-})
-
+    slideLine();
+    setPos(position, current);
+});
 
 hamburg.addEventListener('click', animateHamburger)
