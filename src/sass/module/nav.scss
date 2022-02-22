@@ -4,10 +4,6 @@
     grid-template-columns: 3fr 1fr;
     height: 10rem;
 
-    // @include respond(phone) {
-    //     //grid-template-columns: 5fr 1fr;
-    // }
-
     .navOne {
         //border: solid blue;
         display: flex;
@@ -53,7 +49,7 @@
 
     .navTwo {
         width: 100%;
-        //border: solid red;
+        border: solid red;
         display: flex;
         align-items: center;
         justify-content: center;
