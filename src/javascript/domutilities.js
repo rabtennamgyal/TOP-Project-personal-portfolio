@@ -1,9 +1,15 @@
+// Hamburger 🍔
 const hamburg = document.getElementById('hamburger');
 const one = document.getElementById('lineOne');
 const two = document.getElementById('lineTwo');
 const three = document.getElementById('lineThree');
 const mobileMenu = document.getElementById('mobileMenu');
 const mobileContent = document.querySelector('.mobileContent');
+
+// Hover line 
+const lists = document.querySelectorAll('.list');
+const line = document.getElementById('line');
+
 
 function animateHamburger() {
     if (hamburg.classList.contains('active')) {
@@ -26,5 +32,22 @@ function animateHamburger() {
         mobileContent.style.display = 'none';
     }
 }
+
+function slideLine() {
+    for (let i = 0; i < lists.length; i++) {
+        if (lists[i].matches(':hover')) {
+            const elleft = lists[i].getBoundingClientRect().left;
+            const elwidth = lists[i].offsetWidth;
+            line.style.left = `${elleft}px`;
+            line.style.width = `${elwidth}px`;
+        }
+    }
+    // check for the element that was last hovered 
+}
+
+setInterval(() => {
+    slideLine()
+})
+
 
 hamburg.addEventListener('click', animateHamburger)

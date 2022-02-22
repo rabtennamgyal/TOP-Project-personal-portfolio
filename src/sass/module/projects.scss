@@ -1,0 +1,12 @@
+.projects {
+    min-height: 40rem;
+    border: .1px solid white;
+    display: flex;
+    justify-content: center;
+
+    iframe {
+        width: 90%;
+        height: 60rem;
+    }
+
+}

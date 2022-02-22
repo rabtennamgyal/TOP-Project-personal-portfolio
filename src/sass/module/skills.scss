@@ -1,0 +1,118 @@
+.skills {
+    min-height: 40rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include respond(phone) {
+        grid-template-columns: 1fr;
+        min-height: 60rem;
+    }
+
+    @include respond(tab) {
+        grid-template-columns: 1fr;
+        min-height: 60rem;
+    }
+
+    .skillsOne {
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            cursor: pointer;
+            align-self: center;
+            color: #fff;
+            font-size: 3rem;
+            font-family: Audiowide, cursive, sans-serif;
+        }
+
+        .icons {
+            height: 90%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            .icon {
+                cursor: pointer;
+                height: 50px;
+                width: 50px;
+                color: #fff;
+            }
+
+            #html {
+                :hover {
+                    color: #FF5733;
+                }
+            }
+
+            #css {
+                :hover {
+                    color: #2965f1;
+                }
+            }
+
+            #javascript {
+                :hover {
+                    color: #f0db4f;
+                }
+            }
+
+            #sass {
+                :hover {
+                    color: #cc6699;
+                }
+            }
+
+            #react {
+                :hover {
+                    color: #61DBFB;
+                }
+            }
+        }
+    }
+
+    .skillsTwo {
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            cursor: pointer;
+            align-self: center;
+            color: #fff;
+            font-size: 3rem;
+            font-family: Audiowide, cursive, sans-serif;
+        }
+
+        .icons {
+            height: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .icon {
+                margin: 0 5rem;
+                cursor: pointer;
+                height: 50px;
+                width: 50px;
+                color: #fff;
+            }
+
+            #git {
+                :hover {
+                    color: #f1502f;
+                }
+            }
+
+            #github {
+                :hover {
+                    color: #aa33aa;
+                }
+            }
+
+            #webpack {
+                :hover {
+                    color: #8ed5fa;
+                }
+            }
+        }
+    }
+}

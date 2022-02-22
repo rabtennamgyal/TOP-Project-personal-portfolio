@@ -4,9 +4,9 @@
     grid-template-rows: 30% 70%;
 
     .intro1 {
-        width: 50%;
-        overflow: hidden;
-        padding: 0 3rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
         
         @include respond(phone) {
             padding: 0;
@@ -16,54 +16,77 @@
         }
 
         #welcome {
+            margin-left: 3rem;
+            cursor: pointer;
             font-family: Audiowide, cursive, sans-serif;
-            font-size: 11rem;
+            font-size: 9rem;
             text-transform: uppercase;    
-            animation: flicker 5s infinite alternate;
-            animation-delay: 5s;
 
             @include respond(phone) {
-                font-size: 7rem;
-            }
-
-            @include respond(tab) {
-                font-size: 8rem;
+                font-size: 6rem;
+                margin: 0;
             }
         }
 
         #welcome::before {
-            content: attr(data-text);
+            color: #000;
             color: #fff;
+            content: attr(data-text);
+            position: absolute;
             height: 25%;
             width: 0;
-            position: absolute;
             animation: slideright 4s linear forwards;
             overflow: hidden;
         }
     }
 
     .intro2 {
-        border: solid red;
-        width: 50%;
-        overflow: hidden;
-        animation: slideright2 4s linear forwards;
-        animation-delay: 4s;
-        padding: 0 3rem;
+        //border: solid red;
 
-        // #self {
-        //     font-family: Audiowide, cursive, sans-serif;
-        //     font-size: 8rem;  
-        // }
+        .intro2Content {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            // height: 50%;
+            // width: 50%;
+            margin-left: 3rem;
+            overflow: hidden;
 
-        // #self::before {
-        //     content: attr(data-self);
-        //     color: #ffffff;
-        //     height: 25%;
-        //     width: 0;
-        //     position: absolute;
-        //     animation: slideright 4s linear forwards;
-        //     overflow: hidden;
-        // }
+            @include respond(phone) {
+                margin: 0;
+                width: 100%;
+                justify-content: center;
+            }
+
+            @include respond(tab) {
+                width: 70%;
+            }
+            
+            #self {
+                position: relative;
+                font-size: 5rem;
+                font-family: Audiowide, cursive, monospace, sans-serif;
+
+                @include respond(phone) {
+                    font-size: 2rem;
+                }
+
+                @include respond(tab) {
+                    font-size: 2.5rem;
+                }
+            }
+
+            #self::before {
+                content: attr(data-self);
+                position: absolute;
+                height: 100%;
+                top: 0;
+                left: 0;
+                width: 0;
+                animation: slideright2 2s linear forwards;
+                overflow: hidden;
+            }
+        }
     }
 }
 
@@ -80,19 +103,8 @@
     100% {
         height: 25%;
         width: inherit;
+        color: #000000;
         color: #fff;
-        -webkit-text-stroke: .1px #f09;
-        text-shadow:             
-        0 0 6px #fff,
-        0 0 7px #fff,
-        0 0 8px #fff,
-        0 0 9px #fff,
-        0 0 10px #fff,
-        0 0 9px #f09,
-        0 0 10px #f09,
-        0 0 12px #f09,
-        0 0 13px  #f09,
-        0 0 15px #f09;
     }
 }
 
@@ -101,33 +113,9 @@
         width: 0;
     }
 
-    99% {
-        width: 99%;
-    }
-
     100% {
-        width: inherit;
+        color: #fff;
+        width: 100%;
     }
 }
 
-@keyframes flicker {
-
-    0%, 18%, 22%, 25%, 53%, 57%, 100% {
-        text-shadow:
-        0 0 6px #fff,
-        0 0 7px #fff,
-        0 0 8px #fff,
-        0 0 9px #fff,
-        0 0 10px #fff,
-        0 0 9px #f09,
-        0 0 10px #f09,
-        0 0 12px #f09,
-        0 0 13px  #f09,
-        0 0 15px #f09;
-    }
-    
-    20%, 24%, 55% {       
-        text-shadow: none;
-        -webkit-text-stroke: 0px #fff;
-    }
-}
