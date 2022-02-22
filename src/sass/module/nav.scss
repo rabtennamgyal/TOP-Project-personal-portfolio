@@ -1,10 +1,15 @@
 .navbar {
     position: relative;
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 3fr 1fr;
     height: 10rem;
 
+    // @include respond(phone) {
+    //     //grid-template-columns: 5fr 1fr;
+    // }
+
     .navOne {
+        //border: solid blue;
         display: flex;
         align-items: center;
 
@@ -13,6 +18,7 @@
         }
 
         .list {
+            //border: solid red;
             cursor: pointer;
             margin: 0 3rem;
             color: #fff;
@@ -46,6 +52,8 @@
     }
 
     .navTwo {
+        width: 100%;
+        //border: solid red;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -78,11 +86,11 @@
             z-index: 1001;
             cursor: pointer;
             margin-top: .5rem;
-            margin-right: 1.5rem;
+            margin-right: 5px;
             height: 20px;
             width: 25px;
-            justify-self: end;
             display: none;
+            //justify-self: end;
 
             @include respond(phone) {
                 display: grid;
@@ -115,88 +123,85 @@
             }
         }
     }
+}
 
-    .mobileMenu {
-        z-index: 1000;
-        background: #000;
-        position: absolute;
-        height: 0;
-        width: 100vw;
-        max-width:100%;
-        transition: 0.7s ease-in-out;
+.mobileMenu {
+    z-index: 1000;
+    background: #000;
+    position: absolute;
+    height: 0;
+    width: 100vw;
+    max-width:100%;
+    transition: 0.7s ease-in-out;
 
-        @include respond(tab) {
-            display: none;
+    @include respond(tab) {
+        display: none;
+    }
+
+    @include respond(desk) {
+        display: none;
+    }
+
+    .mobileContent {
+        height: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+
+        .text {
+
+            h1 {
+                color: #fff;
+                cursor: pointer;
+                font-family: Akaya+Telivigala, cursive, sans-serif;
+                font-size: 2rem;
+                margin: 2rem 0;
+                animation: scaleIn .7s ease-in;
+            }
         }
 
-        @include respond(desk) {
-            display: none;
-        }
+        .lists {
+            cursor: pointer;
+            background: #000000;
+            height: 15rem;
+            width: 15rem;
+            margin: 2rem 0;
+            border-radius: 10px;
 
-        .mobileContent {
-            height: 100%;
-            display: none;
-            flex-direction: column;
-            align-items: center;
+            &:hover {
+                background: #fff;
 
-            .text {
-
-                h1 {
-                    color: #fff;
-                    cursor: pointer;
-                    font-family: Akaya+Telivigala, cursive, sans-serif;
-                    font-size: 2rem;
-                    margin: 2rem 0;
-                    animation: scaleIn .7s ease-in;
+                i {
+                    color: #000000;
                 }
             }
-    
-            .lists {
-                cursor: pointer;
-                background: #000000;
-                height: 15rem;
-                width: 15rem;
-                margin: 2rem 0;
-                border-radius: 10px;
 
-                &:hover {
-                    background: #fff;
+            li {
+                height: 100%;
+                list-style: none;
+                display: grid;
+                place-items: center;
+
+                a {
+                    text-decoration: none;
+
+                    #twitter {
+                        font-size: 8rem;
+                    }
+
+                    #github, #linkedin {
+                        font-size: 9rem;
+                    }
 
                     i {
-                        color: #000000;
-                    }
-                }
-
-                li {
-                    height: 100%;
-                    list-style: none;
-                    display: grid;
-                    place-items: center;
-    
-                    a {
-                        text-decoration: none;
-
-                        #twitter {
-                            font-size: 8rem;
-                        }
-
-                        #github, #linkedin {
-                            font-size: 9rem;
-                        }
-    
-                        i {
-                            color: #ffffff;
-                            transition: 0.7s ease-in;
-                        }
+                        color: #ffffff;
+                        transition: 0.7s ease-in;
                     }
                 }
             }
-
-
         }
     }
 }
-
 
 @keyframes scaleIn {
     0% {
