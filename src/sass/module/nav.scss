@@ -58,7 +58,9 @@
             place-items: center;
         }
 
-        .list {
+        li {
+            list-style: none;
+
             @include respond(phone) {
                 display: none;
             }
