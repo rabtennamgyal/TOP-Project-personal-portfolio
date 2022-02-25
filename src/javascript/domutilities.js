@@ -64,3 +64,47 @@ setInterval(() => {
 });
 
 hamburg.addEventListener('click', animateHamburger)
+
+// Carousel 🎠
+const right = document.getElementById('right');
+const left = document.getElementById('left');
+const tile = document.querySelectorAll('.aboutContainer');
+const tiles = Array.from(tile);
+
+let cur = 0;
+let max = tiles.length;
+
+tiles.forEach((el, i) => {
+    el.style.transform = `translateX(${100 * (i - cur)}%)`;
+    console.log(el ,i);
+    console.log(100 * (i - cur))
+})
+
+function slideRight() {
+    if (cur === max - 1) {
+        cur = 0;
+    } else {
+        cur++;
+    }
+
+    tiles.forEach((el, i) => {
+        el.style.transform = `translateX(${100 * (i - cur)}%)`;
+        console.log(el ,i);
+        console.log(100 * (i - cur))
+    })
+}
+
+function slideLeft() {
+    if (cur === 0) {
+        cur = max - 1;
+    } else {
+        cur--;
+    }
+
+    tiles.forEach((el, i) => {
+        el.style.transform = `translateX(${100 * (i - cur)}%)`;
+    })
+}
+
+right.addEventListener('click', slideRight);
+left.addEventListener('click', slideLeft);
