@@ -3,6 +3,10 @@
     display: grid;
     grid-template-rows: 30% 70%;
 
+    @include respond(phone) {
+        min-height: 40rem;
+    }
+
     .intro1 {
         width: 100%;
         display: flex;

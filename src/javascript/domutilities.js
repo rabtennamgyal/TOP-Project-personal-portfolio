@@ -66,7 +66,7 @@ setInterval(() => {
 hamburg.addEventListener('click', animateHamburger)
 
 
-// Carousel 🎠
+// Carousel About 🎠 
 const right = document.getElementById('right');
 const left = document.getElementById('left');
 const tile = document.querySelectorAll('.aboutContainer');
@@ -91,17 +91,57 @@ function slideDown() {
     })
 }
 
-function slideUp() {
-    if (cur === 0) {
-        cur = max - 1;
+// function slideUp() {
+//     if (cur === 0) {
+//         cur = max - 1;
+//     } else {
+//         cur--;
+//     }
+// console.log('hi')
+//     tiles.forEach((el, i) => {
+//         el.style.transform = `translateY(${100 * (i - cur)}%)`;
+//     })
+// }
+
+right.addEventListener('click', slideDown);
+
+
+// Carousel Projects 🎠 
+const pright = document.getElementById('pright');
+const pleft = document.getElementById('pleft');
+const project = document.querySelectorAll('.proBox');
+const projects = Array.from(project);
+
+let pcur = 0;
+let pmax = projects.length;
+
+projects.forEach((el, i) => {
+    el.style.transform = `translateX(${100 * (i - pcur)}%)`;
+})
+
+function slideRight() {
+    if (pcur === pmax - 1) {
+        pcur = 0;
     } else {
-        cur--;
+        pcur++;
     }
-console.log('hi')
-    tiles.forEach((el, i) => {
-        el.style.transform = `translateY(${100 * (i - cur)}%)`;
+
+    projects.forEach((el, i) => {
+        el.style.transform = `translateX(${100 * (i - pcur)}%)`;
     })
 }
 
-right.addEventListener('click', slideDown);
-left.addEventListener('click', slideUp);
+function slideLeft() {
+    if (pcur === 0) {
+        pcur = pmax - 1;
+    } else {
+        pcur--;
+    }
+
+    projects.forEach((el, i) => {
+        el.style.transform = `translateX(${100 * (i - pcur)}%)`;
+    })
+}
+
+pright.addEventListener('click', slideRight);
+pleft.addEventListener('click', slideLeft);

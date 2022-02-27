@@ -1,8 +1,39 @@
 .projects {
+    position: relative;
     margin: 1rem 0 0 0;
     min-height: 60rem;
     display: flex;
     flex-direction: column;
+
+    @include respond(phone) {
+        height: 30rem;
+    }
+
+    .parrow {
+        cursor: pointer;
+        position: absolute;
+        font-size: 3rem;
+        color: #fff;
+        z-index: 100;
+        top: 50%;
+
+        @include respond(phone) {
+            top: 31%;
+            color: #000;
+        }
+    }
+
+    #pright {
+        left: 95%;
+
+        @include respond(phone) {
+            left: 89%;
+        }
+    }
+
+    #pleft {
+        left: 3%;
+    }
 
     .proTitle {
         margin: 3rem 0;
@@ -19,81 +50,96 @@
         align-self: flex-start;
     }
 
-    .proBox {
-        margin: 2rem 0 2rem 2rem;
+    .proContainer {
+        position: relative;
         align-self: center;
-        display: grid;
-        grid-template-columns: 75% 25%;
-        height: 30rem;
+        display: flex;
+        height: 45rem;
         width: 80%;
+        overflow: hidden;
 
         @include respond(phone) {
-            margin: 0;
             width: 100%;
-            grid-template-columns: 1fr;
+            height: 30rem;
         }
 
-        @include respond(tab) {
-            margin: 0;
-            width: 100%;
-            grid-template-columns: 1fr;
-        }
-
-        .proBox1 {
-            
-            #weatherapp {
-                height: 100%;
-                width: 90%;
-
-                @include respond(phone) {
-                    width: 100%;
-                }
-
-                @include respond(tab) {
-                    width: 100%;
-                }
-            }
-        }
-
-        .proBox2 {
+        .proBox {
+            position: absolute;
             align-self: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            height: 50%;
-
+            display: grid;
+            grid-template-columns: 80% 20%;
+            height: 100%;
+            width: 100%;
+            transition: 0.7s ease-in-out;
+    
             @include respond(phone) {
-                height: 100%;
-                flex-direction: row;
-                justify-content: space-around;
+                margin: 0;
+                width: 100%;
+                grid-template-columns: 1fr;
             }
-
+    
             @include respond(tab) {
-                height: 100%;
-                flex-direction: row;
-                justify-content: space-around;
+                margin: 0;
+                width: 100%;
+                grid-template-columns: 1fr;
             }
-
-            h1 {
-                cursor: pointer;
-                color: #fff;
-                font-size: 2rem;
-                font-family: Audiowide, sans-serif, cursive;
+    
+            .proBox1 {
+                
+                #weatherapp {
+                    height: 100%;
+                    width: 100%;
+    
+                    @include respond(phone) {
+                        width: 100%;
+                    }
+    
+                    @include respond(tab) {
+                        width: 100%;
+                    }
+                }
             }
-
-            li {
-                cursor: pointer;
-                list-style: none;
-
-                a {
-                    text-decoration: none;
+    
+            .proBox2 {
+                align-self: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                height: 50%;
+    
+                @include respond(phone) {
+                    height: 100%;
+                    flex-direction: row;
+                    justify-content: space-around;
+                }
+    
+                @include respond(tab) {
+                    height: 100%;
+                    flex-direction: row;
+                    justify-content: space-around;
+                }
+    
+                h1 {
+                    cursor: pointer;
                     color: #fff;
-                    font-size: 1.8rem;
+                    font-size: 2rem;
                     font-family: Audiowide, sans-serif, cursive;
-
-                    &:hover {
-                        color: #808080;
+                }
+    
+                li {
+                    cursor: pointer;
+                    list-style: none;
+    
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                        font-size: 1.8rem;
+                        font-family: Audiowide, sans-serif, cursive;
+    
+                        &:hover {
+                            color: #808080;
+                        }
                     }
                 }
             }
