@@ -91,18 +91,6 @@ function slideDown() {
     })
 }
 
-// function slideUp() {
-//     if (cur === 0) {
-//         cur = max - 1;
-//     } else {
-//         cur--;
-//     }
-// console.log('hi')
-//     tiles.forEach((el, i) => {
-//         el.style.transform = `translateY(${100 * (i - cur)}%)`;
-//     })
-// }
-
 right.addEventListener('click', slideDown);
 
 
