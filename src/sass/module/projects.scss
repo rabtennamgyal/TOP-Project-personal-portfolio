@@ -9,39 +9,60 @@
         min-height: 15rem;
     }
 
-    .parrow {
-        cursor: pointer;
+    .parrow {   
+        top: 50%; 
+        display: inline-block;
         position: absolute;
-        font-size: 3rem;
-        color: #fff;
+        cursor: pointer;
         z-index: 100;
-        top: 50%;        
+        width: 25px;
+        padding: 15px;
+        font-size: 1.5rem;
+        color: #fff;
+        border: .1px solid #fff;
+        border-radius: 90%;
+        text-align: center;
+        transition: 0.7s ease-in;
+
+        &:hover {
+            background: #fff;
+            color: #000;
+        }
 
         @include respond(phone) {
-            color: #000;
-            font-size: 2rem;
+            font-size: 1rem;
+            width: 15px;
+            padding: 5px;
+            top: 50%;
+            background: #000;
+            color: #fff;
         }
 
         @include respond(tab) {
-            font-size: 2rem;
-            top: 40%;
+            top: 38%;
+            width: 25px;
+            padding: 10px;
         }
     }
 
     #pright {
-        left: 95%;
+        left: 90%;
 
-        @include respond(phone) {
-            left: 89%;
-        }
+        // @include respond(phone) {
+        //     left: 89%;
+        // }
+
+        // @include respond(tab) {
+        //     left: 94%;
+        // }
     }
 
     #pleft {
         left: 3%;
 
-        @include respond(phone) {
-            left: 5%;
-        }
+        // @include respond(phone) {
+        //     left: 5%;
+        // }
     }
 
     .proTitle {

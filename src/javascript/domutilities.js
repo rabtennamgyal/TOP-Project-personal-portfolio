@@ -88,10 +88,25 @@ function slideDown() {
 
     tiles.forEach((el, i) => {
         el.style.transform = `translateY(${100 * (i - cur)}%)`;
+    });
+
+    left.style.display = 'block';
+}
+
+function slideUp() {
+    if (cur === 0) {
+        cur = max - 1;
+    } else {
+        cur--;
+    }
+
+    tiles.forEach((el, i) => {
+        el.style.transform = `translateY(${100 * (i - cur)}%)`;
     })
 }
 
 right.addEventListener('click', slideDown);
+left.addEventListener('click', slideUp);
 
 
 // Carousel Projects 🎠 

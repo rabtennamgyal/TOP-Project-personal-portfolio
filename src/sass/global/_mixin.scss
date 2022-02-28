@@ -16,10 +16,4 @@
             @content;
         }
     }
-
-    // @if $breakpoint == beyond {
-    //     @media (min-width: 1501px) {
-    //         @content
-    //     }
-    // }
 };
