@@ -45,6 +45,7 @@
     }
 
     .aboutContent {
+        //border: .1px solid red;
         overflow: hidden;
         position: relative;
         display: flex;
@@ -85,7 +86,8 @@
                 font-size: 2rem;
 
                 @include respond(phone) {
-                    font-size: .9rem;
+                    margin: 10px 0;
+                    //font-size: .9rem;
                 }
 
                 @include respond(tab) {
