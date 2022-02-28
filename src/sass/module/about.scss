@@ -75,7 +75,7 @@
                 font-size: 2rem;
 
                 @include respond(phone) {
-                    font-size: 1.9rem;
+                    font-size: 1.8rem;
                     margin: 10px 0;
                 }
 
@@ -201,6 +201,7 @@
 
                 @include respond(phone) {
                     display: grid;
+                    justify-content: center;
                 }
 
                 #second {
@@ -208,6 +209,7 @@
 
                     @include respond(phone) {
                         margin-left: 0;
+                        margin-top: -5px;
                     }
                 }
             }
