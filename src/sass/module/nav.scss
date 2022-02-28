@@ -131,8 +131,8 @@
     background: #fffbfb;
     position: absolute;
     min-height: 0;
-    width: 100vw;
-    max-width:100%;
+    //width: 100vw;
+    width: 100%;
     transition: 0.7s ease-in-out;
 
     @include respond(tab) {
@@ -144,22 +144,10 @@
     }
 
     .mobileContent {
-        height: 100%;
         display: none;
         flex-direction: column;
+        justify-content: space-around;
         align-items: center;
-
-        .text {
-
-            h1 {
-                color: #fff;
-                cursor: pointer;
-                font-family: Akaya+Telivigala, cursive, sans-serif;
-                font-size: 2rem;
-                margin: 2rem 0;
-                animation: scaleIn .7s ease-in;
-            }
-        }
 
         .lists {
             cursor: pointer;

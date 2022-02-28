@@ -19,8 +19,12 @@ function animateHamburger() {
         three.style.marginTop = '9.8px';
         hamburg.classList.remove('active');
         mobileMenu.style.minHeight = '100vh';
+        mobileMenu.style.top = '0';
+        document.body.style.width = '100vw';
+        document.body.style.position = 'fixed';
         setTimeout(() => {
             mobileContent.style.display = 'flex';
+            mobileContent.style.height = '100vh';
         }, 1000);
     } else {
         one.style.transform = 'rotate(0deg)';
@@ -28,8 +32,12 @@ function animateHamburger() {
         three.style.transform = 'rotate(0deg)';
         three.style.marginTop = '0px';
         hamburg.classList.add('active');
-        mobileMenu.style.minHeight = '0';
         mobileContent.style.display = 'none';
+        mobileContent.style.height = '0';
+        mobileMenu.style.minHeight = '0';
+        mobileMenu.style.top = '0';
+        document.body.style.width = '100%';
+        document.body.style.position = 'static';
     }
 }
 
