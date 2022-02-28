@@ -6,7 +6,7 @@
     flex-direction: column;
 
     @include respond(phone) {
-        height: 30rem;
+        min-height: 15rem;
     }
 
     .parrow {
@@ -15,11 +15,16 @@
         font-size: 3rem;
         color: #fff;
         z-index: 100;
-        top: 50%;
+        top: 50%;        
 
         @include respond(phone) {
-            top: 31%;
             color: #000;
+            font-size: 2rem;
+        }
+
+        @include respond(tab) {
+            font-size: 2rem;
+            top: 40%;
         }
     }
 
@@ -33,6 +38,10 @@
 
     #pleft {
         left: 3%;
+
+        @include respond(phone) {
+            left: 5%;
+        }
     }
 
     .proTitle {
@@ -85,6 +94,15 @@
             }
     
             .proBox1 {
+                justify-self: center;
+                align-self: center;
+                height: 70%;
+                width: 70%;
+
+                @include respond(phone) {
+                    height: 90%;
+                    width: 90%;
+                }
                 
                 #weatherapp {
                     height: 100%;
