@@ -130,7 +130,7 @@
     z-index: 1000;
     background: #fffbfb;
     position: absolute;
-    height: 0;
+    min-height: 0;
     width: 100vw;
     max-width:100%;
     transition: 0.7s ease-in-out;

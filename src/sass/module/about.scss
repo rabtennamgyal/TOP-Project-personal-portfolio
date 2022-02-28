@@ -29,23 +29,12 @@
         transform: rotate(90deg);
 
         @include respond(phone) {
-            left: 40%;
-        }
-    }
-
-    #left {
-        cursor: pointer;
-        top: 0%;
-        left: 48%;
-        transform: rotate(90deg);
-
-        @include respond(phone) {
+            z-index: 100;
             left: 40%;
         }
     }
 
     .aboutContent {
-        //border: .1px solid red;
         overflow: hidden;
         position: relative;
         display: flex;
@@ -86,8 +75,8 @@
                 font-size: 2rem;
 
                 @include respond(phone) {
+                    font-size: 1.9rem;
                     margin: 10px 0;
-                    //font-size: .9rem;
                 }
 
                 @include respond(tab) {
@@ -197,6 +186,28 @@
                         :hover {
                             color: #8ed5fa;
                         }
+                    }
+                }
+            }
+        }
+
+        #textContainer {
+            display: flex;
+
+            .textBox {
+                width: 90%;
+                display: flex;
+                align-items: center;
+
+                @include respond(phone) {
+                    display: grid;
+                }
+
+                #second {
+                    margin-left: -3px;
+
+                    @include respond(phone) {
+                        margin-left: 0;
                     }
                 }
             }

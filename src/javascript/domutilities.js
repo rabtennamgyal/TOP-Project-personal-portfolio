@@ -18,7 +18,7 @@ function animateHamburger() {
         three.style.transform = 'rotate(-45deg)';
         three.style.marginTop = '9.8px';
         hamburg.classList.remove('active');
-        mobileMenu.style.height = '100vh';
+        mobileMenu.style.minHeight = '100vh';
         setTimeout(() => {
             mobileContent.style.display = 'flex';
         }, 1000);
@@ -28,7 +28,7 @@ function animateHamburger() {
         three.style.transform = 'rotate(0deg)';
         three.style.marginTop = '0px';
         hamburg.classList.add('active');
-        mobileMenu.style.height = '0';
+        mobileMenu.style.minHeight = '0';
         mobileContent.style.display = 'none';
     }
 }
