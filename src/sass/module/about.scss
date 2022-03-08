@@ -138,45 +138,33 @@
             cursor: pointer;
             height: 40px;
             width: 40px;
-            color: #fff;
             padding: 5px;
             border-radius: 10px;
             transition: 0.7s ease-in-out;
 
             &:hover {
                 border: .1px solid #fff;
-                //margin-top: -10%;
             }
           }
 
           #html {
-            :hover {
-              color: #ff5733;
-            }
+            color: #ff5733;
           }
 
           #css {
-            :hover {
-              color: #2965f1;
-            }
+            color: #2965f1;
           }
 
           #javascript {
-            :hover {
-              color: #f0db4f;
-            }
+            color: #f0db4f;
           }
 
           #sass {
-            :hover {
-              color: #cc6699;
-            }
+            color: #cc6699;
           }
 
           #react {
-            :hover {
-              color: #61dbfb;
-            }
+            color: #61dbfb;
           }
         }
       }
@@ -205,33 +193,25 @@
             cursor: pointer;
             height: 40px;
             width: 40px;
-            color: #fff;
             padding: 5px;
             border-radius: 5px;
             transition: 0.7s ease-in-out;
 
             &:hover {
                 border: .1px solid #fff;
-                //margin-top: -10%;
             }
           }
 
           #git {
-            :hover {
-              color: #f1502f;
-            }
+            color: #f1502f;
           }
 
           #github {
-            :hover {
-              color: #aa33aa;
-            }
+            color: #aa33aa;
           }
 
           #webpack {
-            :hover {
-              color: #8ed5fa;
-            }
+            color: #8ed5fa;
           }
         }
       }
