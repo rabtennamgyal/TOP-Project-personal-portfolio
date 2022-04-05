@@ -5,10 +5,20 @@ const two = document.getElementById("lineTwo");
 const three = document.getElementById("lineThree");
 const mobileMenu = document.getElementById("mobileMenu");
 const mobileContent = document.querySelector(".mobileContent");
-
 // Hover line
 const lists = document.querySelectorAll(".links");
 const line = document.getElementById("line");
+// Carousel About 🎠
+const right = document.getElementById("right");
+const left = document.getElementById("left");
+const tile = document.querySelectorAll(".aboutContainer");
+const tiles = Array.from(tile);
+// Carousel Projects 🎠
+const pright = document.getElementById("pright");
+const pleft = document.getElementById("pleft");
+const project = document.querySelectorAll(".proBox");
+const projects = Array.from(project);
+
 
 function animateHamburger() {
   if (hamburg.classList.contains("active")) {
@@ -72,12 +82,7 @@ setInterval(() => {
 
 hamburg.addEventListener("click", animateHamburger);
 
-// Carousel About 🎠
-const right = document.getElementById("right");
-const left = document.getElementById("left");
-const tile = document.querySelectorAll(".aboutContainer");
-const tiles = Array.from(tile);
-
+// Carousel
 let cur = 0;
 const max = tiles.length;
 
@@ -115,11 +120,6 @@ right.addEventListener("click", slideDown);
 left.addEventListener("click", slideUp);
 
 // Carousel Projects 🎠
-const pright = document.getElementById("pright");
-const pleft = document.getElementById("pleft");
-const project = document.querySelectorAll(".proBox");
-const projects = Array.from(project);
-
 let pcur = 0;
 const pmax = projects.length;
 
@@ -154,4 +154,3 @@ function slideLeft() {
 pright.addEventListener("click", slideRight);
 pleft.addEventListener("click", slideLeft);
 
-// Skills Icon Animation
