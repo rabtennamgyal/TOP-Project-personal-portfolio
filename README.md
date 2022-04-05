@@ -1,1 +1,1 @@
-Personal Portfolio build using Vanilla JS ans Sass.
+Personal Portfolio build using Vanilla JS and Sass.
