@@ -1,3 +1,3 @@
-live demo: https://dulcet-custard-efe2e2.netlify.app/
+Personal Portfolio is build using Vanilla JavaScript and Sass.
 
-Please check out my personal portfolio build using react and sass.
+live demo: https://glittering-blini-218543.netlify.app/
